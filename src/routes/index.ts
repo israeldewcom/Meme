@@ -1,0 +1,26 @@
+import { Router } from "express";
+import authRoutes from "./auth.routes";
+import walletRoutes from "./wallet.routes";
+import publicRoutes from "./public.routes";
+import memeRoutes from "./memes.routes";
+import challengeRoutes from "./challenges.routes";
+import referralRoutes from "./referrals.routes";
+import announcementRoutes from "./announcements.routes";
+import uploadRoutes from "./uploads.routes";
+import adminRoutes from "./admin.routes";
+import analyticsRoutes from "./analytics.routes";
+import superRoutes from "./super.routes";
+
+const router = Router();
+router.use("/auth", authRoutes);
+router.use("/wallet", walletRoutes);
+router.use("/public", publicRoutes);
+router.use("/memes", memeRoutes);
+router.use("/challenges", challengeRoutes);
+router.use("/referrals", referralRoutes);
+router.use("/announcements", announcementRoutes);
+router.use("/uploads", uploadRoutes);
+router.use("/analytics", analyticsRoutes);
+router.use("/admin", adminRoutes);
+router.use("/super", superRoutes);
+export default router;
